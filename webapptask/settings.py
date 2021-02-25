@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'webapptask.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'WebApp',
+        'USER': 'postgres',
+        'PASSWORD': 'Sam123123123',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -123,3 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[ BASE_DIR / 'static']
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = '/media/'
